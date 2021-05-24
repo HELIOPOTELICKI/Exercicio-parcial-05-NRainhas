@@ -2,24 +2,37 @@
 EXERCÍCIO PARCIAL 05 - PROBLEMA N-RAINHAS
 Dupla: Hélio Potelicki e Pedro Henrique Roweder
 
+Módulo usado: pip install more-itertools
 '''
 from itertools import permutations
 
+#=========== Define a quantidade de Rainhas ===========#
 N = 8
-sol = 0
+#=========== Define um máximo de interações ===========#
+maxIterations = 1000
+#======================================================#
+
+last = True
+solution = 0
 cols = range(N)
 
 for combo in permutations(cols):
     if N == len(set(combo[i] + i
                     for i in cols)) == len(set(combo[i] - i for i in cols)):
-        sol += 1
+        solution += 1
 
-        resp = "\n".join(' 0 ' * i + ' 1 ' + ' 0 ' * (N - i - 1)
-                         for i in combo)
+        if (solution == maxIterations):
+            print(f'Número máximo de -> {maxIterations} <- iterações atingido')
+            last = False
+            break
 
-        if (sol == 1):
-            print(f'\nInicial --> {combo} \n{resp} \n\n')
+        board = "\n".join(' 0 ' * i + ' 1 ' + ' 0 ' * (N - i - 1)
+                          for i in combo)
+
+        if (solution == 1):
+            print(f'\nInicial --> {combo} \n{board} \n\n')
 
         lastCombo = combo
 
-print(f'Final --> {lastCombo} \n{resp}')
+if last:
+    print(f'Final --> {lastCombo} \n{board}')
