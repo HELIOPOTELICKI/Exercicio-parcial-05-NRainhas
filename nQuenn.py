@@ -7,7 +7,7 @@ from itertools import permutations
 
 N = 8
 sol = 0
-cols = range(sol, N)
+cols = range(N)
 
 for combo in permutations(cols):
     if N == len(set(combo[i] + i
@@ -18,8 +18,8 @@ for combo in permutations(cols):
                          for i in combo)
 
         if (sol == 1):
-            print(f'Inicial --> {combo} \n{resp} \n\n')
+            print(f'\nInicial --> {combo} \n{resp} \n\n')
 
         lastCombo = combo
 
-print(f'Final --> {lastCombo} \n{resp} \n\n')
+print(f'Final --> {lastCombo} \n{resp}')
