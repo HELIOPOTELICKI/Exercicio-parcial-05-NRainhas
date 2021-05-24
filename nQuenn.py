@@ -16,6 +16,18 @@ last = True
 solution = 0
 cols = range(N)
 
+
+def shift(tuple):
+    newArr = []
+
+    for element in tuple:
+        newArr.append(element + 1)
+
+    newArr = str(newArr)
+
+    return newArr
+
+
 for combo in permutations(cols):
     if N == len(set(combo[i] + i
                     for i in cols)) == len(set(combo[i] - i for i in cols)):
@@ -30,9 +42,9 @@ for combo in permutations(cols):
                           for i in combo)
 
         if (solution == 1):
-            print(f'\nInicial --> {combo} \n{board} \n\n')
+            print(f'\nInicial --> {shift(combo)} \n{board} \n\n')
 
         lastCombo = combo
 
 if last:
-    print(f'Final --> {lastCombo} \n{board}')
+    print(f'Final --> {shift(lastCombo)} \n{board}')
