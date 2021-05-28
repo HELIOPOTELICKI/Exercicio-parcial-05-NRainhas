@@ -1,3 +1,9 @@
+
+/**
+* EXERCÍCIO PARCIAL 05 - PROBLEMA NRAINHAS
+* Luís Felipe Zaguini Nunes Ferreira
+ */
+
 import java.util.Arrays;
 
 public class nRainhas {
@@ -100,7 +106,7 @@ public class nRainhas {
             int usado[] = new int[n];
 
             System.out.println("-----------------------------------------------------------");
-            System.out.println("Para " + n + " Rainhas");
+            System.out.println("\nPara " + n + " Rainhas");
 
             tempoAcumulado = 0;
             solucoes = 0;
@@ -118,14 +124,14 @@ public class nRainhas {
 
             tempoAcumulado = tempoAcumulado + tempo;
 
-            System.out.println("Soluções: " + solucoes);
+            System.out.println("Soluções: " + solucoes + "\n");
 
             tempoTotalDeTeste = tempoTotalDeTeste + tempoAcumulado;
         }
 
-        System.out.println("=================================");
-        System.out.println("O tempo total: " + tempoTotalDeTeste + " milisegundos");
-        System.out.println("=================================");
+        System.out.println("====================================");
+        System.out.println("Tempo de execução: " + tempoTotalDeTeste + " milisegundos");
+        System.out.println("====================================");
     }
 
     public static void main(String args[]) {
