@@ -2,7 +2,7 @@
 /**
 * EXERCÍCIO PARCIAL 05 - PROBLEMA NRAINHAS
 * Luís Felipe Zaguini Nunes Ferreira
- */
+*/
 
 import java.util.Arrays;
 
@@ -75,7 +75,7 @@ public class nRainhas {
         String tabuleiro = "";
         solucoes++;
 
-        tabuleiro = tabuleiro + (" Solução número " + solucoes + ":\n ");
+        tabuleiro = ("\n  Solução número " + solucoes + ":\n ");
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -93,7 +93,7 @@ public class nRainhas {
         tabuleiroCompleto = append(tabuleiroCompleto, tabuleiro);
     }
 
-    private static void nRainhas(int[] listaProblemasASolucionar) {
+    private static void resolve(int[] listaProblemasASolucionar) {
 
         double tempoTotalDeTeste = 0;
         long tempoAcumulado;
@@ -137,7 +137,7 @@ public class nRainhas {
     public static void main(String args[]) {
 
         int[] listaProblemasASolucionar = { 8 };
-        nRainhas(listaProblemasASolucionar);
+        resolve(listaProblemasASolucionar);
         System.out.println(nRainhas.tabuleiroCompleto[0]);
         System.out.println(nRainhas.tabuleiroCompleto[tabuleiroCompleto.length - 1]);
     }
