@@ -93,15 +93,15 @@ public class nRainhas {
         tabuleiroCompleto = append(tabuleiroCompleto, tabuleiro);
     }
 
-    private static void resolve(int[] listaProblemasASolucionar) {
+    private static void resolve(int[] qntRainhas) {
 
         double tempoTotalDeTeste = 0;
         long tempoAcumulado;
         long tempo;
 
-        for (int problemaAtual = 0; problemaAtual < listaProblemasASolucionar.length; problemaAtual++) {
+        for (int problemaAtual = 0; problemaAtual < qntRainhas.length; problemaAtual++) {
 
-            int n = listaProblemasASolucionar[problemaAtual];
+            int n = qntRainhas[problemaAtual];
             int rainhas[] = new int[n];
             int usado[] = new int[n];
 
@@ -136,8 +136,8 @@ public class nRainhas {
 
     public static void main(String args[]) {
 
-        int[] listaProblemasASolucionar = { 8 };
-        resolve(listaProblemasASolucionar);
+        int[] qntRainhas = { 8 };
+        resolve(qntRainhas);
         System.out.println(nRainhas.tabuleiroCompleto[0]);
         System.out.println(nRainhas.tabuleiroCompleto[tabuleiroCompleto.length - 1]);
     }
