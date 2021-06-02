@@ -1,9 +1,3 @@
-
-/**
-* EXERCÍCIO PARCIAL 05 - PROBLEMA NRAINHAS
-* Luís Felipe Zaguini Nunes Ferreira
-*/
-
 import java.util.Arrays;
 
 public class nRainhas {
